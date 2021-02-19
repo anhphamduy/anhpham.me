@@ -1,0 +1,22 @@
+@import "~antd/lib/style/index";
+
+header {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+.make-y-margin(@minWidth, @margin) {
+  @media (min-width: @minWidth) {
+    .container {
+      margin-top: @margin !important;
+      margin-bottom: @margin !important;
+    }
+  }
+}
+
+.make-y-margin(@screen-xs-min, 6px);
+.make-y-margin(@screen-sm-min, 8px);
+.make-y-margin(@screen-md-min, 10px);
+.make-y-margin(@screen-lg-min, 12px);
+.make-y-margin(@screen-xl-min, 14px);
+.make-y-margin(@screen-xxl-min, 16px);

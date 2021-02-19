@@ -3,9 +3,9 @@
 @offset-xs: 48px;
 @offset-sm: 60px;
 @offset-md: 80px;
-@offset-lg: 100px;
-@offset-xl: 120px;
-@offset-xxl: 200px;
+@offset-lg: 110px;
+@offset-xl: 150px;
+@offset-xxl: 240px;
 
 .container {
   display: flex;
@@ -14,10 +14,10 @@
   width: 90%;
 }
 
-.make-container(@minWidth, @breakpoint) {
+.make-container(@minWidth, @maxWidth) {
   @media (min-width: @minWidth) {
     .container {
-      max-width: @breakpoint;
+      max-width: @maxWidth;
     }
   }
 }
