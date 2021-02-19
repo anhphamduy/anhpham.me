@@ -1,0 +1,63 @@
+.home {
+  position: relative;
+  .intro-section {
+    padding-top: 100px;
+    font-size: 24px;
+
+    div {
+      margin-right: 60px;
+    }
+
+    .ant-divider,
+    .ant-divider-horizontal {
+      border-width: 1px;
+      border-color: #858585;
+      margin-bottom: 8px;
+      margin-top: 16px;
+      width: 36px;
+      min-width: auto;
+    }
+
+    .text-light {
+      font-size: 18px;
+    }
+
+    .typist-wrapper {
+      min-height: 80px;
+      .Typist {
+        margin-top: 12px;
+        .Cursor--blinking {
+          margin-left: -1px;
+        }
+      }
+    }
+
+    button {
+      max-width: 200px;
+    }
+
+    i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      animation: bounce 2s infinite;
+      transition: opacity 0.3s ease-in-out;
+      margin-top: 100px;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
