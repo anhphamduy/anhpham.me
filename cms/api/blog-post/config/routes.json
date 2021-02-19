@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/blog-post",
+      "handler": "blog-post.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blog-post-summary",
+      "handler": "blog-post-summary.findPaths",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/blog-post",
+      "handler": "blog-post.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/blog-post",
+      "handler": "blog-post.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
