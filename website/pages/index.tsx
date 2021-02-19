@@ -1,7 +1,8 @@
-import Head from 'next/head'
+import Head from "next/head";
+import createLayout from "./components/layouts/layout";
 
-export default function Home() {
-  return (
-   "Something"
-  )
-}
+const Home = () => {
+  return <div className="">Something</div>;
+};
+
+export default createLayout(<Home />);
