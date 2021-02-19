@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./container";
+import Link from "next/link";
 
 const Layout = (props) => {
   return (
@@ -12,9 +13,28 @@ const Layout = (props) => {
 
 const LayoutHeader = (props) => {
   return (
-    <header className="container">
-      <img src="/logo.svg" height="50px" />
-    </header>
+    <div className="container">
+      <header>
+        <img src="/logo.svg" height="50px" />
+        <div>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+          <Link href="/">
+            <a>Project</a>
+          </Link>
+          <Link href="/">
+            <a>About</a>
+          </Link>
+          <Link href="/">
+            <a>Contact</a>
+          </Link>
+          <Link href="/">
+            <a>Blog</a>
+          </Link>
+        </div>
+      </header>
+    </div>
   );
 };
 
