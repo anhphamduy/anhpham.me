@@ -40,22 +40,17 @@ const Home = () => {
               <i className="fa fa-map-marker" aria-hidden="true"></i>
               <Title level={2}>Based in Melbourne, Australia</Title>
               <Paragraph>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                I am a 20 year old technologist. By day I help build the future
+                of legal service at Lawyers on Demand. By night I study my
+                Bachelor at Melbourne University.
               </Paragraph>
               <Paragraph>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                I love to bring ideas to life with code. If you want to
+                collaborate, hit me up and we can book something in.
               </Paragraph>
               <Paragraph>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                I love travelling and I am willing to relocate anywhere for
+                work!
               </Paragraph>
               <Button type="primary" size="large">
                 Learn More About Me
