@@ -54,7 +54,7 @@ header {
   }
 }
 
-@media only screen and (max-width: @btMd) {
+@media only screen and (max-width: (@btMd - 0.1px)) {
   header {
     img {
       z-index: 3;
@@ -72,10 +72,26 @@ header {
       display: flex;
       flex-direction: column;
 
-      a {
-        color: white;
-        margin-left: 0px;
-        margin-bottom: 12px;
+      div:not(:nth-child(6)) {
+        margin-bottom: 18px;
+
+        a {
+          color: white;
+          font-size: calc(@heading-4-size + 8px);
+          padding-bottom: 4px;
+          margin-left: 0px;
+          border-bottom: 2px solid #a4d6bd;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 900px) {
+  header {
+    .menu-link-container {
+      div:last-child {
+        margin-top: 10px !important;
       }
     }
   }
