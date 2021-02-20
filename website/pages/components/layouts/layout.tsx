@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "antd";
 
@@ -12,41 +12,61 @@ const Layout = (props) => {
 };
 
 const LayoutHeader = (props) => {
+  const [isHamMenuVisible, openHamMenu] = useState(false);
+
   return (
     <div className="container">
       <header className="d-flex mt-3">
-        <img src="/logo.svg" height="50px" />
+        <img
+          src={`/logo${isHamMenuVisible ? "-white" : ""}.svg`}
+          height="50px"
+        />
         <div className="right-section">
-          <div className="d-none d-md-flex align-items-center justify-content-between">
-            <Link href="/">
-              <a className="active">Home</a>
-            </Link>
-            <Link href="/">
-              <a>Project</a>
-            </Link>
-            <Link href="/">
-              <a>About</a>
-            </Link>
-            <Link href="/">
-              <a>Contact</a>
-            </Link>
-            <Link href="/">
-              <a>Blog</a>
-            </Link>
+          <div
+            className={`${
+              isHamMenuVisible
+                ? "justify-content-center"
+                : "d-none justify-content-between"
+            } d-md-flex align-items-center  menu-link-container`}
+          >
+            <div
+              className={`${
+                isHamMenuVisible && "container flex-column d-flex"
+              }`}
+            >
+              <Link href="/">
+                <a className="active">Home</a>
+              </Link>
+              <Link href="/">
+                <a>Project</a>
+              </Link>
+              <Link href="/">
+                <a>About</a>
+              </Link>
+              <Link href="/">
+                <a>Contact</a>
+              </Link>
+              <Link href="/">
+                <a>Blog</a>
+              </Link>
+            </div>
           </div>
           <div className="d-block d-md-none">
             <Button
               type="primary"
               shape="circle"
               icon={
-                <div id="nav-icon3">
+                <div className={`ham-menu-icon ${isHamMenuVisible && "open"}`}>
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
                 </div>
               }
-              onClick={() => {}}
+              onClick={() => {
+                document.querySelector("body").classList.toggle("fixedScroll");
+                openHamMenu(!isHamMenuVisible);
+              }}
               size="large"
               className="bar-menu-button"
             />

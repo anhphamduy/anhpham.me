@@ -8,6 +8,10 @@
   }
 }
 
+.fixedScroll {
+  overflow: hidden;
+}
+
 header {
   align-items: center;
   justify-content: space-between;
@@ -50,12 +54,44 @@ header {
   }
 }
 
+@media only screen and (max-width: @btMd) {
+  header {
+    img {
+      z-index: 3;
+    }
+
+    .menu-link-container {
+      background-color: @link-color;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      height: 100vh;
+      max-height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: white;
+        margin-left: 0px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
 .bar-menu-button {
   height: 51px !important;
   width: 51px !important;
   padding: 0px !important;
+  z-index: 3;
+
+  &:focus {
+    background-color: @primary-color;
+  }
 }
-#nav-icon3 {
+.ham-menu-icon {
   width: calc(100% - 18px);
   height: calc(100% - 18px);
   margin: 9px 9px;
@@ -71,10 +107,10 @@ header {
   cursor: pointer;
 }
 
-#nav-icon3 span {
+.ham-menu-icon span {
   display: block;
   position: absolute;
-  height: 2.5px;
+  height: 2px;
   width: 100%;
   background: white;
   border-radius: 9px;
@@ -92,40 +128,40 @@ header {
 
 /* Icon 3 */
 
-#nav-icon3 span:nth-child(1) {
-  top: 0px;
+.ham-menu-icon span:nth-child(1) {
+  top: 8px;
 }
 
-#nav-icon3 span:nth-child(2),
-#nav-icon3 span:nth-child(3) {
-  top: 11px;
+.ham-menu-icon span:nth-child(2),
+.ham-menu-icon span:nth-child(3) {
+  top: 15.5px;
 }
 
-#nav-icon3 span:nth-child(4) {
-  top: 22px;
+.ham-menu-icon span:nth-child(4) {
+  top: 23px;
 }
 
-#nav-icon3.open span:nth-child(1) {
-  top: 22px;
+.ham-menu-icon.open span:nth-child(1) {
+  top: 23px;
   width: 0%;
   left: 50%;
 }
 
-#nav-icon3.open span:nth-child(2) {
+.ham-menu-icon.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-#nav-icon3.open span:nth-child(3) {
+.ham-menu-icon.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-#nav-icon3.open span:nth-child(4) {
+.ham-menu-icon.open span:nth-child(4) {
   top: 18px;
   width: 0%;
   left: 50%;
