@@ -28,7 +28,9 @@ const Home = () => {
         <Button type="primary" size="large">
           Get in touch
         </Button>
-        <BouncingChevron />
+        <div>
+          <BouncingChevron />
+        </div>
       </div>
       <div className="brief-summary-section">
         <img src="/Slanted-Gradient.svg" />
@@ -55,6 +57,9 @@ const Home = () => {
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </Paragraph>
+              <Button type="primary" size="large">
+                Learn More About Me
+              </Button>
             </div>
           </div>
         </div>

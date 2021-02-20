@@ -14,10 +14,10 @@ const Layout = (props) => {
 const LayoutHeader = (props) => {
   return (
     <div className="container">
-      <header>
+      <header className="d-flex mt-3">
         <img src="/logo.svg" height="50px" />
         <div className="right-section">
-          <div>
+          <div className="d-none d-md-flex align-items-center justify-content-between">
             <Link href="/">
               <a className="active">Home</a>
             </Link>
@@ -33,6 +33,23 @@ const LayoutHeader = (props) => {
             <Link href="/">
               <a>Blog</a>
             </Link>
+          </div>
+          <div className="d-block d-md-none">
+            <Button
+              type="primary"
+              shape="circle"
+              icon={
+                <div id="nav-icon3">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              }
+              onClick={() => {}}
+              size="large"
+              className="bar-menu-button"
+            />
           </div>
           <div className="social-media vertical">
             <Button
