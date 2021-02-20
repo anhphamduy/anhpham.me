@@ -5,6 +5,8 @@ import { Button, Divider } from "antd";
 import "../styles/pages/home.less";
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
+import Title from "antd/lib/typography/Title";
+import Paragraph from "antd/lib/typography/Paragraph";
 
 const initialSentencesToType = ["I do React", "I code cool websites"];
 
@@ -27,6 +29,36 @@ const Home = () => {
           Get in touch
         </Button>
         <BouncingChevron />
+      </div>
+      <div className="brief-summary-section">
+        <img src="/Slanted-Gradient.svg" />
+        <div className="content primary-background">
+          <div className="container">
+            <div className="text-wrapper">
+              <i className="fa fa-map-marker" aria-hidden="true"></i>
+              <Title level={2}>Based in Melbourne, Australia</Title>
+              <Paragraph>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </Paragraph>
+              <Paragraph>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </Paragraph>
+              <Paragraph>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </Paragraph>
+            </div>
+          </div>
+        </div>
+        <img src="/Slanted-Gradient.svg" className="inverted-image" />
       </div>
     </div>
   );
