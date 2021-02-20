@@ -19,6 +19,6 @@ app.prepare().then(() => {
     }
   }).listen(port, (err) => {
     if (err) throw err
-    console.log(`> Ready on http://localhost:${port} with dev being ${dev}`)
+    console.log(`> Ready on http://localhost:${port}`)
   })
 })
