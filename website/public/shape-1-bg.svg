@@ -1,0 +1,39 @@
+<svg id="Scattered-Forcefields" xmlns="http://www.w3.org/2000/svg" width="1920" height="730" viewBox="0 0 1920 730">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #014841;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #707070;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke-width: 4px;
+      }
+
+      .cls-4 {
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-1" width="1920" height="730"/>
+  <g id="Group_10" data-name="Group 10" transform="translate(87.645 44)">
+    <g id="Group_8" data-name="Group 8" transform="translate(147.108 0)">
+      <path id="Path_5" data-name="Path 5" class="cls-2" d="M1409,562.817,1439.61,511l29.35,51.817Z" transform="translate(135.489 -127.091)"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-3" cx="29.5" cy="29.5" r="29.5" transform="translate(105.247)"/>
+      <path id="Path_6" data-name="Path 6" class="cls-2" d="M379.111,724.624H317.13a30.99,30.99,0,1,1,61.98,0Z" transform="translate(-317.13 -157.485)"/>
+    </g>
+    <g id="Group_9" data-name="Group 9" transform="translate(0 27.063)">
+      <path id="Path_7" data-name="Path 7" class="cls-3" d="M141.644,345.2,118.4,378.215l23.244,33.015,23.244-33.015Z" transform="translate(-118.4 -134.406)"/>
+      <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-4" width="74" height="74" transform="translate(1241.355 520.937)"/>
+      <path id="Path_8" data-name="Path 8" class="cls-3" d="M1404.955,122.945l-15.619,26.945h-31.091L1342.7,122.945,1358.245,96h31.091Z" transform="translate(299.819 -96)"/>
+    </g>
+  </g>
+</svg>
