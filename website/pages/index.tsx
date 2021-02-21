@@ -59,60 +59,71 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="py-5 container">
-        <Title level={1}>Publication</Title>
-        <Row gutter={[16, 16]}>
-          <Col span={8}>
-            <Card
-              hoverable
-              cover={
-                <img
-                  alt="example"
-                  src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                />
-              }
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
-          <Col span={8}>
-            <Card
-              hoverable
-              cover={
-                <img
-                  alt="example"
-                  src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                />
-              }
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
-          <Col span={8}>
-            <Card
-              hoverable
-              cover={
-                <img
-                  alt="example"
-                  src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                />
-              }
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>
-          </Col>
-        </Row>
+      <div className="py-5 container publication-section">
+        <Title className="mb-4" level={2}>
+          Publications
+        </Title>
+
+        <div className="row">
+          <div className="col-12 col-lg-4  pe-lg-2 mb-3 mb-lg-0 ps-lg-0">
+            <PublicationCard
+              place="Web Directions Summit"
+              title="The truth behind Virtual DOM"
+              blurb="https://www.webdirections.org/wds18/speakers/anh-pham.php"
+              talk="https://conffab.com/video/the-truth-behind-virtual-dom/"
+              description="The talk was about the performance of Virtual DOM, and why it is actually not as fast as most engineers think."
+            />
+          </div>
+          <div className="col-12 col-lg-4 px-lg-1 mb-3 mb-lg-0">
+            <PublicationCard
+              place="PyCon AU"
+              title="Emojifer in @ school"
+              blurb="https://2018.pycon-au.org/education-showcase"
+              talk="https://youtu.be/QNAgPjbn0Ws?t=4599"
+              description="I talked about how I use Machine Learning with SPAs as well as Mobile Application using Python and React Native."
+            />
+          </div>
+          <div className="col-12 col-lg-4  ps-lg-2  pe-lg-0">
+            <PublicationCard
+              place="CanberraJS"
+              title="Building a better developer experience for React and React Native"
+              blurb="https://www.meetup.com/CanberraJS/events/252103208/"
+              talk="https://youtu.be/QNAgPjbn0Ws?t=4599"
+              description="My talk was about Navigation APIs in React Native: iOs Navgation & React Navigation"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="technology-section bg-primary">
+        <div className="py-5 container ">
+          <Title level={2}>Working with various techonologies</Title>
+          <Title level={5}>Working with various techonologies</Title>
+        </div>
       </div>
     </div>
+  );
+};
+
+const PublicationCard = ({ blurb, talk, place, title, description }) => {
+  const actions = [];
+  if (blurb) {
+    actions.push(
+      <a href={blurb}>
+        <strong>View Blurb</strong>
+      </a>
+    );
+  }
+  if (talk) {
+    actions.push(
+      <a href={talk}>
+        <strong>View Talk</strong>
+      </a>
+    );
+  }
+  return (
+    <Card className="d-flex flex-column" title={place} actions={actions}>
+      <Meta className="flex-grow-1" title={title} description={description} />
+    </Card>
   );
 };
 
@@ -121,7 +132,6 @@ const BouncingChevron = () => {
 };
 
 const AnimatedTyping = () => {
-  const [doneTyping, setDoneTyping] = useState(false);
   const [sentencesToType, setSentencesToType] = useState(
     initialSentencesToType
   );
