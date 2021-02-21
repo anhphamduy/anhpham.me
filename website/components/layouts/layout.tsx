@@ -72,7 +72,14 @@ const LayoutHeader = (props) => {
                 isHamMenuVisible ? "container flex-column" : "flex-row"
               } d-flex`}
             >
-              <div>
+              <div
+                onClick={() => {
+                  openHamMenu(false);
+                  document
+                    .querySelector("body")
+                    .classList.remove("fixedScroll");
+                }}
+              >
                 <Link href="/">
                   <a className="active">Home</a>
                 </Link>
@@ -82,8 +89,15 @@ const LayoutHeader = (props) => {
                   <a>Project</a>
                 </Link>
               </div>
-              <div>
-                <Link href="/">
+              <div
+                onClick={() => {
+                  openHamMenu(false);
+                  document
+                    .querySelector("body")
+                    .classList.remove("fixedScroll");
+                }}
+              >
+                <Link href="/about">
                   <a>About</a>
                 </Link>
               </div>

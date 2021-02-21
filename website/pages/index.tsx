@@ -1,13 +1,11 @@
-import Head from "next/head";
-import createLayout from "./components/layouts/layout";
-import React, { useState, useEffect } from "react";
-import { Button, Card, Col, Divider, Row, Typography } from "antd";
-import "../styles/pages/home.less";
+import { Button, Card, Divider } from "antd";
+import Meta from "antd/lib/card/Meta";
+import Title from "antd/lib/typography/Title";
+import React, { useState } from "react";
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
-import Title from "antd/lib/typography/Title";
-import Paragraph from "antd/lib/typography/Paragraph";
-import Meta from "antd/lib/card/Meta";
+import createLayout from "../components/layouts/layout";
+import "../styles/pages/home.less";
 
 const initialSentencesToType = ["I do React", "I code cool websites"];
 
