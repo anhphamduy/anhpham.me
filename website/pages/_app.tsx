@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React from "react";
-import "../styles/antd.less";
 
 function MyApp({ Component, pageProps }) {
   return (
