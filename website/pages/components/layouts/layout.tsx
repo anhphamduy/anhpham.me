@@ -1,12 +1,35 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "antd";
+import Title from "antd/lib/typography/Title";
 
 const Layout = (props) => {
   return (
     <div>
       <LayoutHeader />
       {props.children}
+      <div className="contact-redirect-section">
+        <div className="container py-5">
+          <Title className="text-center mb-1 font-weight-extra-bold" level={2}>
+            Ready to start your own project?
+          </Title>
+          <Title className="text-center mb-4" level={4}>
+            Let's have a chat!
+          </Title>
+          <Button
+            className="font-weight-bold d-block mx-auto"
+            type="primary"
+            size="large"
+          >
+            START THE CONVERSATION
+          </Button>
+        </div>
+      </div>
+      <footer className="bg-primary color py-5">
+        <Title className="text-center mb-0 font-weight-extra-bold" level={4}>
+          © Anh Pham — Official Website 2021
+        </Title>
+      </footer>
     </div>
   );
 };

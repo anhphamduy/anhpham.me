@@ -32,7 +32,9 @@ const Home = () => {
           <div className="container">
             <div className="left-align-text-section py-5">
               <i className="fa fa-map-marker" aria-hidden="true"></i>
-              <Title level={2}>Based in Melbourne, Australia</Title>
+              <Title className="font-weight-extra-bold" level={2}>
+                Based in Melbourne, Australia
+              </Title>
               <Title level={5}>
                 I am a 20 year old technologist. By day I help build the future
                 of legal service at Lawyers on Demand. By night I study my
@@ -59,7 +61,7 @@ const Home = () => {
         </Title>
 
         <div className="row">
-          <div className="col-12 col-lg-4  pe-lg-2 mb-3 mb-lg-0 ps-lg-0">
+          <div className="col-12 col-lg-4  pe-lg-2 mb-3 mb-lg-0">
             <PublicationCard
               place="Web Directions Summit"
               title="The truth behind Virtual DOM"
@@ -77,7 +79,7 @@ const Home = () => {
               description="I talked about how I use Machine Learning with SPAs as well as Mobile Application using Python and React Native."
             />
           </div>
-          <div className="col-12 col-lg-4  ps-lg-2  pe-lg-0">
+          <div className="col-12 col-lg-4 ps-lg-2 ">
             <PublicationCard
               place="CanberraJS"
               title="Building a better developer experience for React and React Native"
@@ -91,7 +93,9 @@ const Home = () => {
       <div className="technology-section bg-primary">
         <div className="py-5 container ">
           <div className="left-align-text-section mb-5">
-            <Title level={2}>Working with various techonologies</Title>
+            <Title className="font-weight-extra-bold" level={2}>
+              Working with various techonologies
+            </Title>
             <Title level={5} className="">
               Some technologies are better suited to some problems than others.
               Knowing different technologies helps me know the problems well and
