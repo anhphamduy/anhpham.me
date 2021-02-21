@@ -36,22 +36,22 @@ const Home = () => {
       <div className="brief-summary-section">
         <div className="content">
           <div className="container">
-            <div className="text-wrapper py-5">
+            <div className="left-align-text-section py-5">
               <i className="fa fa-map-marker" aria-hidden="true"></i>
               <Title level={2}>Based in Melbourne, Australia</Title>
-              <Paragraph>
+              <Title level={5}>
                 I am a 20 year old technologist. By day I help build the future
                 of legal service at Lawyers on Demand. By night I study my
                 Bachelor at Melbourne University.
-              </Paragraph>
-              <Paragraph>
+              </Title>
+              <Title level={5}>
                 I love to bring ideas to life with code. If you want to
-                collaborate, hit me up and we can book something in.
-              </Paragraph>
-              <Paragraph>
+                collaborate, hit me up and we can book something in.{" "}
+              </Title>
+              <Title level={5}>
                 I love travelling and I am willing to relocate anywhere for
-                work!
-              </Paragraph>
+                work! Learn More About Me
+              </Title>
               <Button className="mt-5" type="primary" size="large">
                 Learn More About Me
               </Button>
@@ -96,8 +96,14 @@ const Home = () => {
       </div>
       <div className="technology-section bg-primary">
         <div className="py-5 container ">
-          <Title level={2}>Working with various techonologies</Title>
-          <Title level={5}>Working with various techonologies</Title>
+          <div className="left-align-text-section">
+            <Title level={2}>Working with various techonologies</Title>
+            <Title level={5} className="">
+              Some technologies are better suited to some problems than others.
+              Knowing different technologies helps me know the problems well and
+              how to solve the problems efficiently.
+            </Title>
+          </div>
         </div>
       </div>
     </div>
