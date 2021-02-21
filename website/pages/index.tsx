@@ -14,12 +14,6 @@ const initialSentencesToType = ["I do React", "I code cool websites"];
 const Home = () => {
   return (
     <div className="home">
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-      </Head>
       <div className="container intro-section py-5 my-5">
         <div className="text-italic text-light">oh, hello</div>
         <Divider />
@@ -96,13 +90,41 @@ const Home = () => {
       </div>
       <div className="technology-section bg-primary">
         <div className="py-5 container ">
-          <div className="left-align-text-section">
+          <div className="left-align-text-section mb-5">
             <Title level={2}>Working with various techonologies</Title>
             <Title level={5} className="">
               Some technologies are better suited to some problems than others.
               Knowing different technologies helps me know the problems well and
               how to solve the problems efficiently.
             </Title>
+          </div>
+          <div>
+            <style jsx>{`
+              i {
+                font-size: 60px;
+                margin-right: 30px;
+              }
+
+              @media (max-width: 600px) {
+                i {
+                  font-size: 48px;
+                  margin-right: 12px;
+                }
+              }
+
+              @media (max-width: 350px) {
+                i {
+                  font-size: 35px;
+                  margin-right: 8px;
+                }
+              }
+            `}</style>
+            <i className="devicon-flutter-plain"></i>
+            <i className="devicon-react-original"></i>
+            <i className="devicon-python-plain"></i>
+            <i className="devicon-postgresql-plain"></i>
+            <i className="devicon-kubernetes-plain"></i>
+            <i className="devicon-xd-plain"></i>
           </div>
         </div>
       </div>
