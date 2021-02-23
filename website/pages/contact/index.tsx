@@ -72,4 +72,4 @@ const Contact = () => {
   );
 };
 
-export default createLayout(<Contact />, false);
+export default createLayout(<Contact />, false, false);
