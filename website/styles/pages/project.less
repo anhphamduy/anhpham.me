@@ -9,6 +9,11 @@
   }
 
   .project-section {
+    * {
+      line-height: 35px !important;
+      letter-spacing: 1.3px !important;
+    }
+
     position: relative;
     .white-background-left {
       height: 400px;
@@ -25,14 +30,51 @@
     }
 
     &.right-align {
+      .iphone.portrait {
+        transform-origin: 100% 50% !important;
+      }
+
       .white-background-left {
         border-radius: 6px 0px 0px 6px;
         right: 0px;
       }
+    }
 
-      .marvel-device {
-        transform-origin: top right !important;
+    &.mobile {
+      .white-background-left {
+        border-radius: 0px;
+        background-color: transparent;
+        width: 100%;
+        box-shadow: none;
+        height: 250px;
+        .container {
+          height: 100%;
+          width: 100%;
+          div {
+            border-radius: 6px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+
+            -webkit-box-shadow: 0px 0px 19px 6px rgba(46, 46, 46, 1);
+            -moz-box-shadow: 0px 0px 19px 6px rgba(46, 46, 46, 1);
+            box-shadow: 0px 0px 19px 6px rgba(46, 46, 46, 1);
+          }
+        }
       }
+
+      .iphone.portrait {
+        transform-origin: 50% 50% !important;
+      }
+    }
+  }
+
+  .emojifier-project-section {
+    .content {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
@@ -49,55 +91,80 @@
   max-width: 90%;
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1099px) {
-  .marvel-device {
-    transform: scale(0.69) !important;
-  }
+@media screen and (max-width: 500px) {
+  .project-section {
+    &.mobile {
+      .white-background-left {
+        border-radius: 0px;
+        background-color: transparent;
+        width: 100%;
+        box-shadow: none;
+        height: 250px !important;
+        .container {
+          height: 100%;
+          width: 100%;
+          div {
+            border-radius: 6px;
+            background-color: white;
+            height: 100%;
+            width: 100%;
 
+            -webkit-box-shadow: 0px 0px 19px 6px rgba(46, 46, 46, 1);
+            -moz-box-shadow: 0px 0px 19px 6px rgba(46, 46, 46, 1);
+            box-shadow: 0px 0px 19px 6px rgba(46, 46, 46, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 999px) {
+  .project-section {
+    &.mobile {
+      .white-background-left {
+        height: 300px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1049px) {
   .white-background-left {
-    width: 35% !important;
+    width: 28% !important;
     height: 200px !important;
   }
 }
 
-@media screen and (min-width: 1100px) and (max-width: 1199px) {
-  .marvel-device {
-    transform: scale(0.69) !important;
-  }
-
-  .white-background-left {
-    width: 37% !important;
-    height: 200px !important;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1249px) {
-  .marvel-device {
-    transform: scale(0.7) !important;
-  }
-
+@media screen and (min-width: 1050px) and (max-width: 1099px) {
   .white-background-left {
     width: 30% !important;
     height: 200px !important;
   }
 }
 
-@media screen and (min-width: 1250px) and (max-width: 1299px) {
-  .marvel-device {
-    transform: scale(0.71) !important;
-  }
-
+@media screen and (min-width: 1100px) and (max-width: 1199px) {
   .white-background-left {
-    width: 31% !important;
+    width: 32% !important;
+    height: 200px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1249px) {
+  .white-background-left {
+    width: 32% !important;
+    height: 200px !important;
+  }
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1299px) {
+  .white-background-left {
+    width: 33% !important;
     height: 200px !important;
   }
 }
 
 @media screen and (min-width: 1300px) and (max-width: 1349px) {
-  .marvel-device {
-    transform: scale(0.75) !important;
-  }
-
   .white-background-left {
     width: 33% !important;
     height: 210px !important;
@@ -105,10 +172,6 @@
 }
 
 @media screen and (min-width: 1350px) and (max-width: 1399px) {
-  .marvel-device {
-    transform: scale(0.8) !important;
-  }
-
   .white-background-left {
     width: 35% !important;
     height: 220px !important;
@@ -116,10 +179,6 @@
 }
 
 @media screen and (min-width: 1400px) and (max-width: 1499px) {
-  .marvel-device {
-    transform: scale(0.9) !important;
-  }
-
   .white-background-left {
     width: 33% !important;
     height: 220px !important;
@@ -127,36 +186,32 @@
 }
 
 @media screen and (min-width: 1500px) and (max-width: 1599px) {
-  .marvel-device {
-    transform: scale(0.92) !important;
-  }
-
   .white-background-left {
     width: 34.5% !important;
     height: 220px !important;
   }
 }
 
-@media screen and (min-width: 1500px) and (max-width: 1599px) {
-  .marvel-device {
-    transform: scale(0.92) !important;
-  }
+// @media screen and (min-width: 1500px) and (max-width: 1599px) {
+//   .marvel-device {
+//     transform: scale(0.92) !important;
+//   }
 
-  .white-background-left {
-    width: 34.5% !important;
-    height: 220px !important;
-  }
-}
+//   .white-background-left {
+//     width: 34.5% !important;
+//     height: 350px !important;
+//   }
+// }
 
-@media screen and (min-width: 1600px) and (max-width: 1799px) {
-  .marvel-device {
-    transform: scale(0.95) !important;
-  }
+// @media screen and (min-width: 1600px) and (max-width: 1799px) {
+//   .marvel-device {
+//     transform: scale(0.95) !important;
+//   }
 
-  .white-background-left {
-    width: 37.5% !important;
-  }
-}
+//   .white-background-left {
+//     width: 37.5% !important;
+//   }
+// }
 
 @media screen and (min-width: 1800px) {
   .white-background-left {
@@ -167,5 +222,164 @@
 @media screen and (min-width: 2400px) {
   .white-background-left {
     width: 42.5% !important;
+  }
+}
+
+.emoji-project-container {
+  width: 100%;
+  flex: 0.5;
+  .emoji-project {
+    animation: bigger 1s linear;
+    animation-fill-mode: forwards;
+    transform: translate(0%, 0%);
+    .emoji-cont {
+      width: 25%;
+      height: 40%;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(0%, 0%);
+      animation: emoji-bounce 1s infinite;
+      .emoji {
+        position: absolute;
+        transform: translate(0%, 0%);
+
+        top: 50%;
+        left: 50%;
+      }
+
+      .emoji::after {
+        font-size: 12.5vmin;
+        content: "😮";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        animation: rotate-emoji 1s linear infinite,
+          change-emoji 6s -0.5s linear infinite;
+      }
+    }
+    .shadow {
+      width: 25%;
+      height: 5px;
+      background: #263238;
+
+      transform: translate(-50%, -50%);
+
+      position: absolute;
+      top: 85%;
+      left: 50%;
+
+      animation: shadow-bounce 1s linear infinite;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes change-emoji {
+  0% {
+    content: "😮";
+  }
+  12.5% {
+    content: "😵";
+  }
+  25% {
+    content: "😳";
+  }
+  37.5% {
+    content: "🤣";
+  }
+  50% {
+    content: "😇";
+  }
+  62.5% {
+    content: "😎";
+  }
+  75% {
+    content: "🙄";
+  }
+  87.5% {
+    content: "🤢";
+  }
+  100% {
+    content: "😮";
+  }
+}
+
+@keyframes rotate-emoji {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes emoji-bounce {
+  0% {
+    transform: translate(-50%, 50%) scale(1.25, 0.75);
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  50% {
+    transform: translate(-50%, -150%) scale(1, 1);
+    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  100% {
+    transform: translate(-50%, 50%) scale(1.25, 0.75);
+  }
+}
+
+@keyframes shadow-bounce {
+  0% {
+    opacity: 0.25;
+    transform: translate(-50%, -50%) scaleX(1.5);
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scaleX(0.75);
+    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  100% {
+    opacity: 0.25;
+    transform: translate(-50%, -50%) scaleX(1.5);
+  }
+}
+
+@keyframes bigger {
+  0% {
+    height: 0vmin;
+  }
+  50% {
+    height: 25vmin;
+  }
+  100% {
+    height: 50vmin;
   }
 }
