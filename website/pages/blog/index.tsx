@@ -28,11 +28,13 @@ const Blog = () => {
           }
 
           @media screen and (min-width: 1001px) and (max-width: 1400px) {
+            grid-gap: 64px 82px;
             grid-template-columns: auto auto auto;
           }
 
           @media screen and (min-width: 1401px) {
-            grid-template-columns: auto auto auto auto;
+            grid-gap: 64px 82px;
+            grid-template-columns: auto auto auto;
           }
         `}</style>
         {temp.map(() => {
