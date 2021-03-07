@@ -18,6 +18,9 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "snippet": {
+      "type": "string"
     }
   }
 }
