@@ -128,7 +128,7 @@ const LayoutHeader = (props) => {
                   </Link>
                 </div>
                 <div>
-                  <Link href="/">
+                  <Link href="/blog">
                     <a>Blog</a>
                   </Link>
                 </div>
