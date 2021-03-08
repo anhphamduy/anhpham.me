@@ -2,7 +2,8 @@ module.exports = {
   findPaths: async (ctx) => {
     const result = await strapi
       .query("blog-post")
-      .model.fetchAll({ columns: ["id", "published_at", "name", "snippet"] }); // here we wait for one column only
+      .model.find({})
+      .select("snippet name created_at");
     ctx.send(result);
   },
 };
