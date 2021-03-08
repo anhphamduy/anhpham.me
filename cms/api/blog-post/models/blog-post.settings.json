@@ -21,6 +21,9 @@
     },
     "snippet": {
       "type": "string"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
