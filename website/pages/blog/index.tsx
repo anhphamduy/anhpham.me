@@ -1,8 +1,10 @@
 import { Typography } from "antd";
 import Title from "antd/lib/typography/Title";
+import moment from "moment";
 import React, { useEffect, useState } from "react";
 import createLayout from "../../components/layouts/layout";
 import "../../styles/pages/blog.less";
+import Link from "next/link";
 
 const Blog = (props) => {
   return (
@@ -53,14 +55,14 @@ const BlogSnippet = ({ post }) => {
         border-bottom: 0.5px solid #ececec;
       `}</style>
       <Title level={4} className="font-weight-extra-bold text-underline mb-0">
-        <a href="/">{post.name}</a>
+        <Link href={`/blog/${post.slug}`}>
+          <a>{post.name}</a>
+        </Link>
       </Title>
-      <Title className="mt-3" level={5}>
-        December 21, 2020
+      <Title className="mt-1 mb-3" level={5}>
+        {moment(post.createdAt).format("MMM DD, yyyy")}
       </Title>
-      <Typography.Paragraph>
-        Blog post 1 content xxddddxdxd, xdxd xdxd xdxd xd xd xd xd ....
-      </Typography.Paragraph>
+      <Typography.Paragraph>{post.snippet + "..."}</Typography.Paragraph>
     </div>
   );
 };
