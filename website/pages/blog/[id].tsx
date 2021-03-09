@@ -5,11 +5,16 @@ import React, { useEffect, useState } from "react";
 import createLayout from "../../components/layouts/layout";
 import "../../styles/pages/blog.less";
 import marked from "marked";
+import Seo from "../../components/Seo";
 
 const BlogPost = (props) => {
   const post = props.post;
   return (
     <div className="blog-post container">
+      <Seo
+        title={post.name}
+        description={props.post.content.substring(0, 150)}
+      />
       <div className="py-5">
         <style jsx>{`
           border-bottom: 0.5px solid #ececec;

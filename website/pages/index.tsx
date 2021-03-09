@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
 import createLayout from "../components/layouts/layout";
+import Seo from "../components/Seo";
 import "../styles/pages/home.less";
 
 const initialSentencesToType = ["I do React", "I code cool websites"];
@@ -13,6 +14,10 @@ const initialSentencesToType = ["I do React", "I code cool websites"];
 const Home = () => {
   return (
     <div className="home">
+      <Seo
+        title="Home"
+        description="Welcome to Anh Pham page. Summary of Anh Pham - a creator/developer/designer includes his talks his technologies and his philosophy."
+      />
       <div className="container intro-section py-5 my-5">
         <div className="text-italic text-light">oh, hello</div>
         <Divider />

@@ -5,10 +5,15 @@ import React, { useEffect, useState } from "react";
 import createLayout from "../../components/layouts/layout";
 import "../../styles/pages/blog.less";
 import Link from "next/link";
+import Seo from "../../components/Seo";
 
 const Blog = (props) => {
   return (
     <div className="blog container">
+      <Seo
+        title="Blog"
+        description="A collection of Anh Pham's writting. The blog includes all topics that Anh Pham interested in: tech, humanities or just random ideas of Anh Pham"
+      />
       <div className="py-5">
         <style jsx>{`
           border-bottom: 0.5px solid #ececec;

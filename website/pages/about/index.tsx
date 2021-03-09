@@ -2,10 +2,15 @@ import createLayout from "../../components/layouts/layout";
 import React from "react";
 import "../../styles/pages/about.less";
 import Title from "antd/lib/typography/Title";
+import Seo from "../../components/Seo";
 
 const About = () => {
   return (
     <div className="about">
+      <Seo
+        title="About"
+        description="About Anh Pham a creator, developer, desginer. About Anh Pham's experiences, achivements, educations."
+      />
       <div className="py-5 headshot-section">
         <div className="container">
           <div className="d-flex flex-lg-row flex-column align-items-lg-center justify-content-center">

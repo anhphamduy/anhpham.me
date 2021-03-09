@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import "../../styles/pages/project.less";
 import Title from "antd/lib/typography/Title";
 import "../../styles/devices.less";
+import { NextSeo } from "next-seo";
+import Seo from "../../components/Seo";
 
 const Project = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,6 +26,10 @@ const Project = () => {
 
   return (
     <div className="project py-5">
+      <Seo
+        title="Project"
+        description="Project page includes all the projects of Anh Pham as a software developer/creator/desginer. It has Emojifier, Jojoe, and LOD app."
+      />
       <ProjectSection
         title="Lawyers on Demand App"
         isMobile={isMobile}

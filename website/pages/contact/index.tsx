@@ -4,12 +4,17 @@ import Title from "antd/lib/typography/Title";
 import { Button, Form, Input, message } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import SocialMedia from "../../components/SocialMedia";
+import Seo from "../../components/Seo";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
     <div className="contact">
+      <Seo
+        title="Contact"
+        description="Reach out to Anh Pham through a contact form to have a conversation with me. I will be in touch soon in less than 24 hours."
+      />
       <div className="container">
         <div className="contact-header py-5 pe-5">
           <style jsx>{`
