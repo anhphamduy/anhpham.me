@@ -32,24 +32,29 @@ const Project = () => {
         description={
           <React.Fragment>
             <Title level={4}>
-              Jojoe is a marketplace that connects people with beauty and
-              wellness professionals & businesses.
+              LOD is the world's leading legal services company. Its timesheet
+              app was outsourced but wanting to bring it in-house to have more
+              control over the app hence a better experience for the users.
             </Title>
             <Title level={4}>
-              Jojoe is a product that I had worked on over a year, with a tech
-              stack includes: NodeJS, GraphQL and ReactJS. Despite its
-              unsucessful launch, I had gained valuable experiences building a
-              complicated system with a JS stack.
-            </Title>
-            <Title level={4}>
-              The source code of the project is publicly available and is hosted{" "}
+              The app is based on Flutter with Django Rest Framework acting as
+              the API service. It is available on both{" "}
               <a
-                href="https://dev.azure.com/jojeco/Jojoe/_build"
+                href="https://play.google.com/store/apps/details?id=com.lodlaw.mobile"
                 className="font-weight-extra-bold text-underline"
+                target="_blank"
               >
-                here
+                Google Store
               </a>{" "}
-              through Azure Devops.
+              and{" "}
+              <a
+                href="https://apps.apple.com/au/app/lod/id1505271790"
+                className="font-weight-extra-bold text-underline"
+                target="_blank"
+              >
+                Apple Store
+              </a>
+              .
             </Title>
           </React.Fragment>
         }
@@ -77,6 +82,7 @@ const Project = () => {
               <a
                 href="https://dev.azure.com/jojeco/Jojoe/_build"
                 className="font-weight-extra-bold text-underline"
+                target="_blank"
               >
                 here
               </a>{" "}
@@ -103,25 +109,27 @@ const Project = () => {
           description={
             <React.Fragment>
               <Title level={4}>
-                Jojoe is a marketplace that connects people with beauty and
-                wellness professionals & businesses.
+                Emojifier was my first machine learning project ever. It gives
+                sentence emojis based on the sentiment/context of the sentence.
               </Title>
               <Title level={4}>
-                Jojoe is a product that I had worked on over a year, with a tech
-                stack includes: NodeJS, GraphQL and ReactJS. Despite its
-                unsucessful launch, I had gained valuable experiences building a
-                complicated system with a JS stack.
+                Emojifier is based on both Recurrent Neural Network and Long
+                Short Term Memory Network. I generated the training data myself,
+                so the model is biased towards me. However, you can also develop
+                your training data and have Emojifier do the emojifying job for
+                you!
               </Title>
               <Title level={4}>
                 The source code of the project is publicly available and is
                 hosted{" "}
                 <a
-                  href="https://dev.azure.com/jojeco/Jojoe/_build"
+                  href="https://github.com/anhphamduy/emojifier_model"
                   className="font-weight-extra-bold text-underline"
+                  target="_blank"
                 >
                   here
                 </a>{" "}
-                through Azure Devops.
+                through GitHub.
               </Title>
             </React.Fragment>
           }
