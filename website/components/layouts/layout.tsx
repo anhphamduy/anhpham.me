@@ -74,12 +74,17 @@ const LayoutHeader = (props) => {
       `}</style>
       <div className="container">
         <header className="d-flex pt-3">
-          <img
-            src={`/logo${
-              isHamMenuVisible || props.greenBackground ? "-white" : ""
-            }.svg`}
-            height="50px"
-          />
+          <Link href="/">
+            <a className="ms-0">
+              <img
+                src={`/logo${
+                  isHamMenuVisible || props.greenBackground ? "-white" : ""
+                }.svg`}
+                height="50px"
+                alt="Anh Pham's logo"
+              />
+            </a>
+          </Link>
           <div className="right-section">
             <div
               className={`d-md-flex align-items-center menu-link-container ${
