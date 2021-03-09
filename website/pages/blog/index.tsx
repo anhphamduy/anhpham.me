@@ -9,16 +9,16 @@ import Link from "next/link";
 const Blog = (props) => {
   return (
     <div className="blog container">
-      <div className="py-5 pe-5">
+      <div className="py-5">
         <style jsx>{`
           border-bottom: 0.5px solid #ececec;
         `}</style>
         <Title className="font-weight-extra-bold mb-0">All Posts</Title>
       </div>
-      <div className="py-5">
+      <div>
         <style jsx>{`
           display: grid;
-          grid-gap: 56px 56px;
+          grid-gap: 0px 56px;
           grid-template-columns: auto auto;
 
           @media screen and (max-width: 500px) {
@@ -30,12 +30,12 @@ const Blog = (props) => {
           }
 
           @media screen and (min-width: 1001px) and (max-width: 1400px) {
-            grid-gap: 64px 82px;
+            grid-gap: 0px 82px;
             grid-template-columns: auto auto auto;
           }
 
           @media screen and (min-width: 1401px) {
-            grid-gap: 64px 82px;
+            grid-gap: 0px 82px;
             grid-template-columns: auto auto auto;
           }
         `}</style>
@@ -50,7 +50,7 @@ const Blog = (props) => {
 const BlogSnippet = ({ post }) => {
   console.log(post);
   return (
-    <div>
+    <div className="py-4">
       <style jsx>{`
         border-bottom: 0.5px solid #ececec;
       `}</style>
@@ -62,7 +62,9 @@ const BlogSnippet = ({ post }) => {
       <Title className="mt-1 mb-3" level={5}>
         {moment(post.createdAt).format("MMM DD, yyyy")}
       </Title>
-      <Typography.Paragraph>{post.snippet + "..."}</Typography.Paragraph>
+      <Typography.Paragraph className="mb-0">
+        {post.snippet + "..."}
+      </Typography.Paragraph>
     </div>
   );
 };

@@ -9,7 +9,7 @@ import marked from "marked";
 const BlogPost = ({ post }) => {
   return (
     <div className="blog-post container">
-      <div className="py-5 pe-5">
+      <div className="py-5">
         <style jsx>{`
           border-bottom: 0.5px solid #ececec;
         `}</style>
@@ -21,7 +21,7 @@ const BlogPost = ({ post }) => {
         </Title>
       </div>
       <div
-        className="py-5 pe-5 text-justify blog-post-content"
+        className="py-5 text-justify blog-post-content"
         dangerouslySetInnerHTML={{ __html: marked(post.content) }}
       ></div>
       <div>
