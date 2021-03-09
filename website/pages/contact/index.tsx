@@ -1,12 +1,14 @@
 import createLayout from "../../components/layouts/layout";
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/pages/contact.less";
 import Title from "antd/lib/typography/Title";
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, message } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import SocialMedia from "../../components/SocialMedia";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   return (
     <div className="contact">
       <div className="container">
@@ -21,7 +23,6 @@ const Contact = () => {
         </div>
         <div className="contact-form py-5">
           <div>
-            {" "}
             <style jsx>{`
               max-width: 100%;
 
@@ -41,18 +42,54 @@ const Contact = () => {
                 max-width: 45%;
               }
             `}</style>
-            <Form>
-              <Form.Item>
+            <Form
+              onFinish={async (values) => {
+                setIsSubmitting(true);
+
+                try {
+                  await fetch("https://anhphamcms.azurewebsites.net/contacts", {
+                    method: "POST",
+                    headers: {
+                      Accept: "application/json",
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(values),
+                  });
+                  message.success(
+                    "Submitted successfully! I will be in touch soon.",
+                    10
+                  );
+                } catch (err) {
+                  message.error("An error has occured!");
+                }
+                setIsSubmitting(false);
+              }}
+            >
+              <Form.Item
+                rules={[{ required: true, message: "Please input your name!" }]}
+                name="name"
+              >
                 <Input size="large" placeholder="Your name" />
               </Form.Item>
-              <Form.Item>
+              <Form.Item
+                rules={[
+                  { required: true, message: "Please input your email!" },
+                  { type: "email", message: "This is not a valid email!" },
+                ]}
+                name="email"
+              >
                 <Input size="large" placeholder="Your email" />
               </Form.Item>
-              <Form.Item>
+              <Form.Item name="message">
                 <TextArea rows={10} size="large" placeholder="Your message" />
               </Form.Item>
               <Form.Item>
-                <Button size="large" type="primary">
+                <Button
+                  loading={isSubmitting}
+                  size="large"
+                  type="primary"
+                  htmlType="submit"
+                >
                   Send a message
                 </Button>
               </Form.Item>

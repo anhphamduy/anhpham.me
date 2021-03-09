@@ -6,7 +6,8 @@ import createLayout from "../../components/layouts/layout";
 import "../../styles/pages/blog.less";
 import marked from "marked";
 
-const BlogPost = ({ post }) => {
+const BlogPost = (props) => {
+  const post = props.post;
   return (
     <div className="blog-post container">
       <div className="py-5">
