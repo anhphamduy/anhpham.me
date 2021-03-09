@@ -3,8 +3,8 @@ import Title from "antd/lib/typography/Title";
 import React, { useEffect, useState } from "react";
 import createLayout from "../../components/layouts/layout";
 import "../../styles/pages/blog.less";
-const temp = [1, 2, 3, 4, 5, 6, 7, 7, 5, 5, 65, 6, 56, 56];
-const Blog = () => {
+
+const Blog = (props) => {
   return (
     <div className="blog container">
       <div className="py-5 pe-5">
@@ -37,22 +37,23 @@ const Blog = () => {
             grid-template-columns: auto auto auto;
           }
         `}</style>
-        {temp.map(() => {
-          return <BlogSnippet />;
+        {props.posts.map((post) => {
+          return <BlogSnippet post={post} key={post.id} />;
         })}
       </div>
     </div>
   );
 };
 
-const BlogSnippet = () => {
+const BlogSnippet = ({ post }) => {
+  console.log(post);
   return (
     <div>
       <style jsx>{`
         border-bottom: 0.5px solid #ececec;
       `}</style>
       <Title level={4} className="font-weight-extra-bold text-underline mb-0">
-        <a href="/">This is something this is another thing xxd</a>
+        <a href="/">{post.name}</a>
       </Title>
       <Title className="mt-3" level={5}>
         December 21, 2020
@@ -64,4 +65,18 @@ const BlogSnippet = () => {
   );
 };
 
-export default createLayout(<Blog />, true, false, false);
+const BlogWithLayout = (props) => {
+  const Component = createLayout(<Blog />, true, false, false) as any;
+
+  return <Component {...props} />;
+};
+
+BlogWithLayout.getInitialProps = async (ctx) => {
+  const res = await fetch(
+    "https://anhphamcms.azurewebsites.net/blog-post-summary"
+  );
+  const json = await res.json();
+  return { posts: json };
+};
+
+export default BlogWithLayout;

@@ -202,13 +202,13 @@ const createLayout = (
   socialMediaSection = true,
   greenBackground = false
 ) => {
-  return () => (
+  return (props) => (
     <Layout
       contactSection={contactSection}
       socialMediaSection={socialMediaSection}
       greenBackground={greenBackground}
     >
-      {children}
+      {React.cloneElement(children, props)}
     </Layout>
   );
 };
