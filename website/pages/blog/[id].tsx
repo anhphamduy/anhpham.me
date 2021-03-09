@@ -35,7 +35,13 @@ const BlogPost = (props) => {
 };
 
 const BlogPostWithLayout = (props) => {
-  const Component = createLayout(<BlogPost />, true, false, false) as any;
+  const Component = createLayout(
+    <BlogPost />,
+    true,
+    false,
+    false,
+    "Interested in my blog post?"
+  ) as any;
 
   return <Component {...props} />;
 };

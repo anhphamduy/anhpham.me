@@ -1,6 +1,7 @@
 import { Button, Card, Divider } from "antd";
 import Meta from "antd/lib/card/Meta";
 import Title from "antd/lib/typography/Title";
+import Link from "next/link";
 import React, { useState } from "react";
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
@@ -46,9 +47,13 @@ const Home = () => {
                 I love travelling and I am willing to relocate anywhere for
                 work! Learn More About Me
               </Title>
-              <Button className="mt-5" type="primary" size="large">
-                Learn More About Me
-              </Button>
+              <Link href="/about">
+                <a>
+                  <Button className="mt-5" type="primary" size="large">
+                    Learn More About Me
+                  </Button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -20,18 +20,22 @@ const Layout = (props) => {
               className="text-center mb-1 font-weight-extra-bold"
               level={2}
             >
-              Ready to start your own project?
+              {props.footerText}
             </Title>
             <Title className="text-center mb-4" level={4}>
               Let's have a chat!
             </Title>
-            <Button
-              className="font-weight-bold d-block mx-auto"
-              type="primary"
-              size="large"
-            >
-              START THE CONVERSATION
-            </Button>
+            <Link href="/contact">
+              <a>
+                <Button
+                  className="font-weight-bold d-block mx-auto"
+                  type="primary"
+                  size="large"
+                >
+                  START THE CONVERSATION
+                </Button>
+              </a>
+            </Link>
           </div>
         </div>
       )}
@@ -244,13 +248,15 @@ const createLayout = (
   children,
   contactSection = true,
   socialMediaSection = true,
-  greenBackground = false
+  greenBackground = false,
+  footerText = "Ready to start your own project?"
 ) => {
   return (props) => (
     <Layout
       contactSection={contactSection}
       socialMediaSection={socialMediaSection}
       greenBackground={greenBackground}
+      footerText={footerText}
     >
       {React.cloneElement(children, props)}
     </Layout>

@@ -1,6 +1,5 @@
 import createLayout from "../../components/layouts/layout";
 import React, { useState } from "react";
-import "../../styles/pages/contact.less";
 import Title from "antd/lib/typography/Title";
 import { Button, Form, Input, message } from "antd";
 import TextArea from "antd/lib/input/TextArea";

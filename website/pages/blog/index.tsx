@@ -48,7 +48,6 @@ const Blog = (props) => {
 };
 
 const BlogSnippet = ({ post }) => {
-  console.log(post);
   return (
     <div className="py-4">
       <style jsx>{`
@@ -70,7 +69,13 @@ const BlogSnippet = ({ post }) => {
 };
 
 const BlogWithLayout = (props) => {
-  const Component = createLayout(<Blog />, true, false, false) as any;
+  const Component = createLayout(
+    <Blog />,
+    true,
+    false,
+    false,
+    "Interested in my blog posts?"
+  ) as any;
 
   return <Component {...props} />;
 };
