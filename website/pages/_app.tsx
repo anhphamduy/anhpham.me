@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import NProgress from "nprogress";
 import Router from "next/router";
+import "../styles/antd.less";
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => {

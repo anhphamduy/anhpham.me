@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "antd";
 import Title from "antd/lib/typography/Title";
 import SocialMedia from "../SocialMedia";
+import { useRouter } from "next/router";
 
 const Layout = (props) => {
   return (
@@ -45,6 +46,8 @@ const Layout = (props) => {
 
 const LayoutHeader = (props) => {
   const [isHamMenuVisible, openHamMenu] = useState(false);
+
+  const router = useRouter();
 
   const resizeHandler = () => {
     if (window.innerWidth > 767) {
@@ -107,12 +110,18 @@ const LayoutHeader = (props) => {
                   }}
                 >
                   <Link href="/">
-                    <a className="active">Home</a>
+                    <a className={router.pathname == "/" && "active"}>Home</a>
                   </Link>
                 </div>
                 <div>
                   <Link href="/project">
-                    <a>Project</a>
+                    <a
+                      className={
+                        router.pathname.startsWith("/project") && "active"
+                      }
+                    >
+                      Project
+                    </a>
                   </Link>
                 </div>
                 <div
@@ -124,17 +133,35 @@ const LayoutHeader = (props) => {
                   }}
                 >
                   <Link href="/about">
-                    <a>About</a>
+                    <a
+                      className={
+                        router.pathname.startsWith("/about") && "active"
+                      }
+                    >
+                      About
+                    </a>
                   </Link>
                 </div>
                 <div>
                   <Link href="/contact">
-                    <a>Contact</a>
+                    <a
+                      className={
+                        router.pathname.startsWith("/contact") && "active"
+                      }
+                    >
+                      Contact
+                    </a>
                   </Link>
                 </div>
                 <div>
                   <Link href="/blog">
-                    <a>Blog</a>
+                    <a
+                      className={
+                        router.pathname.startsWith("/blog") && "active"
+                      }
+                    >
+                      Blog
+                    </a>
                   </Link>
                 </div>
 
@@ -169,29 +196,41 @@ const LayoutHeader = (props) => {
             </div>
             {props.socialMediaSection && (
               <div className="social-media vertical">
-                <Button
-                  type="primary"
-                  shape="circle"
-                  icon={
-                    <i className="fa fa-stack-overflow" aria-hidden="true" />
-                  }
-                  onClick={() => {}}
-                  size="large"
-                />
-                <Button
-                  type="primary"
-                  shape="circle"
-                  icon={<i className="fa fa-github" aria-hidden="true" />}
-                  onClick={() => {}}
-                  size="large"
-                />
-                <Button
-                  type="primary"
-                  shape="circle"
-                  icon={<i className="fa fa-linkedin" aria-hidden="true" />}
-                  onClick={() => {}}
-                  size="large"
-                />
+                <a
+                  href="https://stackoverflow.com/users/8005315/anh-pham"
+                  target="_blank"
+                >
+                  <Button
+                    type="primary"
+                    shape="circle"
+                    icon={
+                      <i className="fa fa-stack-overflow" aria-hidden="true" />
+                    }
+                    onClick={() => {}}
+                    size="large"
+                  />
+                </a>
+                <a href="https://github.com/anhphamduy" target="_blank">
+                  <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<i className="fa fa-github" aria-hidden="true" />}
+                    onClick={() => {}}
+                    size="large"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/anhphamduy/"
+                  target="_blank"
+                >
+                  <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<i className="fa fa-linkedin" aria-hidden="true" />}
+                    onClick={() => {}}
+                    size="large"
+                  />
+                </a>
               </div>
             )}
           </div>
