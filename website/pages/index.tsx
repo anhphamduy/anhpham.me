@@ -24,9 +24,11 @@ const Home = () => {
 
         <div>I am Anh, a software developer and creator</div>
         <AnimatedTyping />
-        <Button type="primary" size="large">
-          Get in touch
-        </Button>
+        <Link href="/contact">
+          <Button type="primary" size="large">
+            Get in touch
+          </Button>
+        </Link>
         <div>
           <BouncingChevron />
         </div>
