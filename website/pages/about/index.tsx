@@ -62,6 +62,17 @@ const About = () => {
             <div className="col-12 col-md-5 mb-4 mb-lg-0">
               <Title level={2}>Occupation</Title>
               <Title level={5}>
+                Software Developer at{" "}
+                <a
+                  className="text-underline"
+                  target="_blank"
+                  href="https://lodlaw.com/"
+                >
+                  LOD
+                </a>{" "}
+                (2021 - Current)
+              </Title>
+              <Title level={5} className="text-light text-italic mt-0">
                 Junior Software Developer at{" "}
                 <a
                   className="text-underline"
@@ -70,7 +81,7 @@ const About = () => {
                 >
                   LOD
                 </a>{" "}
-                (2019 - Current)
+                (2019 - 2021)
               </Title>
               <Title level={5} className="text-light text-italic mt-0">
                 Software Engineer Intern at{" "}
