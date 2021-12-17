@@ -9,7 +9,7 @@ import createLayout from "../components/layouts/layout";
 import Seo from "../components/Seo";
 import "../styles/pages/home.less";
 
-const initialSentencesToType = ["I do React", "I code cool websites"];
+const initialSentencesToType = ["I do React", "I code cool products"];
 
 const Home = () => {
   return (
@@ -53,7 +53,7 @@ const Home = () => {
               </Title>
               <Title level={5}>
                 I love travelling and I am willing to relocate anywhere for
-                work!
+                work. The work must be interesting of course!
               </Title>
               <Link href="/about">
                 <a>
