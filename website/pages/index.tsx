@@ -43,9 +43,9 @@ const Home = () => {
               </Title>
               <Title level={5}>
                 I am a 20 year old technologist. By day I help build the future
-                of the legal industry at <a href="https://www.lodlaw.com/au/">Lawyers on Demand - a world leading legal 
-                service company with big clients such as Google, Facebook, Barclays</a>. By night I study my
-                Bachelor at <a href="https://www.unimelb.edu.au">Melbourne University</a>.
+                of the legal industry at <a href="https://www.lodlaw.com/au/" className="text-underline">Lawyers on Demand</a> - a world leading legal 
+                service company with big clients such as Google, Facebook, Barclays. By night I study my
+                Bachelor at <a className="text-underline" href="https://www.unimelb.edu.au">Melbourne University</a>.
               </Title>
               <Title level={5}>
                 I love to bring ideas to life with code. If you want to
