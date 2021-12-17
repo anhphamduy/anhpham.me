@@ -43,8 +43,9 @@ const Home = () => {
               </Title>
               <Title level={5}>
                 I am a 20 year old technologist. By day I help build the future
-                of legal service at Lawyers on Demand. By night I study my
-                Bachelor at Melbourne University.
+                of the legal industry at <a href="https://www.lodlaw.com/au/">Lawyers on Demand - a world leading legal 
+                service company with big clients such as Google, Facebook, Barclays</a>. By night I study my
+                Bachelor at <a href="https://www.unimelb.edu.au">Melbourne University</a>.
               </Title>
               <Title level={5}>
                 I love to bring ideas to life with code. If you want to
@@ -52,7 +53,7 @@ const Home = () => {
               </Title>
               <Title level={5}>
                 I love travelling and I am willing to relocate anywhere for
-                work! Learn More About Me
+                work!
               </Title>
               <Link href="/about">
                 <a>
