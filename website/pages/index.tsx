@@ -9,7 +9,7 @@ import createLayout from "../components/layouts/layout";
 import Seo from "../components/Seo";
 import "../styles/pages/home.less";
 
-const initialSentencesToType = ["I do React", "I code cool products"];
+const initialSentencesToType = ["I make cool websites", "I code cool products"];
 
 const Home = () => {
   return (
@@ -42,18 +42,23 @@ const Home = () => {
                 Based in Melbourne, Australia
               </Title>
               <Title level={5}>
-                I am a 20 year old technologist. By day I help build the future
-                of the legal industry at <a href="https://www.lodlaw.com/au/" className="text-underline">Lawyers on Demand</a> - a world leading legal 
-                service company with big clients such as Google, Facebook, Barclays. By night I study my
-                Bachelor at <a className="text-underline" href="https://www.unimelb.edu.au">Melbourne University</a>.
+                I'm a 21 year old technologist. I build the legal industry
+                future at{" "}
+                <a href="https://www.lodlaw.com/au/" className="text-underline">
+                  LOD
+                </a>{" "}
+                - a legal company trusted by Google, Facebook, Barclays, etc.
+              </Title>
+              <Title level={5}>
+                I also teach at{" "}
+                <a className="text-underline" href="https://www.unimelb.edu.au">
+                  Melbourne University
+                </a>{" "}
+                ranked #1 in Australia and #30 globally.
               </Title>
               <Title level={5}>
                 I love to bring ideas to life with code. If you want to
                 collaborate, hit me up and we can book something in.{" "}
-              </Title>
-              <Title level={5}>
-                I love travelling and I am willing to relocate anywhere for
-                work. The work must be interesting of course!
               </Title>
               <Link href="/about">
                 <a>
@@ -105,7 +110,7 @@ const Home = () => {
         <div className="py-5 container ">
           <div className="left-align-text-section mb-5">
             <Title className="font-weight-extra-bold" level={2}>
-              Working with various techonologies
+              Working with various technologies
             </Title>
             <Title level={5} className="">
               Some technologies are better suited to some problems than others.

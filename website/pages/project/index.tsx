@@ -43,6 +43,20 @@ const Project = () => {
               control over the app hence a better experience for the users.
             </Title>
             <Title level={4}>
+              It also features the SQE program. Paralegals all over the UK are
+              now using the app to record their SQE training to get their law
+              practicing certificate. The launch of LOD's SQE program can be
+              accessed{" "}
+              <a
+                href="https://www.law.com/international-edition/2022/03/30/lod-launches-in-house-sqe-programme/?slreturn=20220818113227"
+                className="font-weight-extra-bold text-underline"
+                target="_blank"
+              >
+                through here
+              </a>
+              .
+            </Title>
+            <Title level={4}>
               The app is based on Flutter with Django Rest Framework acting as
               the API service. It is available on both{" "}
               <a
@@ -115,15 +129,13 @@ const Project = () => {
           description={
             <React.Fragment>
               <Title level={4}>
-                Emojifier was my first machine learning project ever. It gives
-                sentence emojis based on the sentiment/context of the sentence.
+                Emojifier was a project that I presented at PyCon in the Sydney
+                International Convention Centre. It gives sentence emojis based
+                on the sentiment/context of the sentence.
               </Title>
               <Title level={4}>
                 Emojifier is based on both Recurrent Neural Network and Long
-                Short Term Memory Network. I generated the training data myself,
-                so the model is biased towards me. However, you can also develop
-                your training data and have Emojifier do the emojifying job for
-                you!
+                Short Term Memory Network.
               </Title>
               <Title level={4}>
                 The source code of the project is publicly available and is

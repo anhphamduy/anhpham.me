@@ -51,7 +51,7 @@ const Contact = () => {
                 setIsSubmitting(true);
 
                 try {
-                  await fetch("https://anhphamcms.azurewebsites.net/contacts", {
+                  await fetch("https://formbold.com/s/3LZk6", {
                     method: "POST",
                     headers: {
                       Accept: "application/json",

@@ -23,7 +23,7 @@ const About = () => {
             <div className="flex-grow-1 ps-0 ps-lg-3 mt-4 mt-lg-0">
               <div>
                 <style jsx>{`
-                  max-width: 80%;
+                  max-width: 80 %;
 
                   @media (max-width: 600px) {
                     max-width: 100%;
@@ -54,8 +54,8 @@ const About = () => {
               </Title>
               <Title level={5}>
                 I'm currently a software developer at LOD - a world leading
-                legal services firm. Aside from LOD, I'm in my final year of
-                Bachelor of Science at The University of Melbourne.
+                legal services firm. Aside from LOD, I also teach at the
+                University of Melbourne.
               </Title>
               <Title level={5}>Willing to relocate AOE!</Title>
             </div>
@@ -71,6 +71,18 @@ const About = () => {
                   LOD
                 </a>{" "}
                 (2021 - Current)
+              </Title>
+
+              <Title level={5} className={"mt-0"}>
+                Teaching Assistant for COMP30022 at{" "}
+                <a
+                  className="text-underline"
+                  target="_blank"
+                  href="https://www.unimelb.edu.au"
+                >
+                  Melbourne University
+                </a>{" "}
+                (2022 - Current)
               </Title>
               <Title level={5} className="text-light text-italic mt-0">
                 Junior Software Developer at{" "}
@@ -88,14 +100,14 @@ const About = () => {
                 <a
                   className="text-underline"
                   target="_blank"
-                  href="https://lodlaw.com/"
+                  href="https://www.crunchbase.com/acquisition/lawyers-on-demand-acquires-lexvoco--9a8edc56"
                 >
-                  LOD
+                  lexvoco
                 </a>{" "}
                 (2018 - 2019)
               </Title>
               <Title level={5} className="text-light text-italic mt-0">
-                Data Science Assitant at{" "}
+                Data Science Assistant at{" "}
                 <a
                   className="text-underline"
                   target="_blank"
@@ -110,6 +122,17 @@ const About = () => {
           <div className="row">
             <div className="col-12 col-md-7 pe-5 mb-4 mb-lg-0">
               <Title level={2}>Achievement</Title>
+              <Title level={5} className="mt-0">
+                Guest Lecturer at{" "}
+                <a
+                  href="https://unimelb.edu.au/"
+                  target="_blank"
+                  className="text-underline"
+                >
+                  Melbourne University
+                </a>{" "}
+                (2022)
+              </Title>
               <Title level={5} className="mt-0">
                 <a
                   href="https://codebrew.com.au/"
@@ -146,7 +169,7 @@ const About = () => {
             <div className="col-12 col-md-5 mb-4 mb-lg-0">
               <Title level={2}>Education</Title>
               <Title level={5}>
-                Bachelor of Science at{" "}
+                Bachelor of Computer Science at{" "}
                 <a
                   className="text-underline"
                   target="_blank"
@@ -154,7 +177,7 @@ const About = () => {
                 >
                   The University of Melbourne
                 </a>{" "}
-                (2019 - 2022)
+                (2019 - 2021)
               </Title>
               <Title level={5} className="text-light text-italic mt-0">
                 ACT Senior Secondary Certificate and Tertiary Entrance Statement

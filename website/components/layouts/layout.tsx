@@ -41,7 +41,7 @@ const Layout = (props) => {
       )}
       <footer className="bg-primary color py-5">
         <Title className="text-center mb-0 font-weight-extra-bold" level={4}>
-          © Anh Pham — Official Website 2021
+          © Anh Pham — Official Website 2022
         </Title>
       </footer>
     </div>
@@ -124,7 +124,7 @@ const LayoutHeader = (props) => {
                         router.pathname.startsWith("/project") && "active"
                       }
                     >
-                      Project
+                      Work
                     </a>
                   </Link>
                 </div>
@@ -157,17 +157,17 @@ const LayoutHeader = (props) => {
                     </a>
                   </Link>
                 </div>
-                <div>
-                  <Link href="/blog">
-                    <a
-                      className={
-                        router.pathname.startsWith("/blog") && "active"
-                      }
-                    >
-                      Blog
-                    </a>
-                  </Link>
-                </div>
+                {/*<div>*/}
+                {/*  <Link href="/blog">*/}
+                {/*    <a*/}
+                {/*      className={*/}
+                {/*        router.pathname.startsWith("/blog") && "active"*/}
+                {/*      }*/}
+                {/*    >*/}
+                {/*      Blog*/}
+                {/*    </a>*/}
+                {/*  </Link>*/}
+                {/*</div>*/}
 
                 <div className="mt-5 d-block d-md-none">
                   <SocialMedia />
